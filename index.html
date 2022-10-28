@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Drum Machine</title>
+    <script>
+        function play(id) {
+            let audio = document.getElementById(id);
+            audio.play();
+        };
+        
+        window.document.onkeyup = function(event) {
+            const key = event.key;
+            if (key === "q" || key === "Q") {
+                play("Q");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "w" || key === "W") {
+                play("W");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "e" || key === "E") {
+                play("E");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "a" || key === "A") {
+                play("A");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "s" || key === "S") {
+                play("S");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "d" || key === "D") {
+                play("D");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "z" || key === "Z") {
+                play("Z");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "x" || key === "X") {
+                play("X");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            } else if (key === "c" || key === "C") {
+                play("C");
+                document.getElementById("display").innerText = event.key.toUpperCase();
+            };
+        };
+    </script>
+    <style>
+        .btn-purple {
+            background-color: #A020F0;
+            color: white;
+        }
+
+        .btn-redorange {
+            background-color: #FF5349;
+            color: white;
+        }
+
+        .btn {
+            margin: 0.5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="drum-machine">
+        <h1 class="text-center">Drum Machine</h1>
+        <div class="card my-3">
+            <div class="card-body">
+                <div class="text-center" id="display">This is the display screen</div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col-sm drum-pad btn btn-block btn-primary" id="drum-0" onClick="play('Q')">
+                Q
+                <audio src="./clip/Heater-1.mp3" class="clip" id="Q"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-secondary" id="drum-1" onClick="play('W')">
+                W
+                <audio src="./clip/Heater-2.mp3" class="clip" id="W"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-danger" id="drum-2" onClick="play('E')">
+                E
+                <audio src="./clip/Heater-3.mp3" class="clip" id="E"></audio>
+            </button>
+        </div>
+        <div class="row">
+            <button class="col-sm drum-pad btn btn-block btn-success" id="drum-3" onClick="play('A')">
+                A
+                <audio src="./clip/Heater-4_1.mp3" class="clip" id="A"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-warning" id="drum-4" onClick="play('S')">
+                S
+                <audio src="./clip/Heater-6.mp3" class="clip" id="S"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-info" id="drum-5" onClick="play('D')">
+                D
+                <audio src="./clip/Kick_n_Hat.mp3" class="clip" id="D"></audio>
+            </button>
+        </div>
+        <div class="row">
+            <button class="col-sm drum-pad btn btn-block btn-dark" id="drum-6" onClick="play('Z')">
+                Z
+                <audio src="./clip/RP4_KICK_1.mp3" class="clip" id="Z"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-purple" id="drum-7" onClick="play('X')">
+                X
+                <audio src="./clip/Cev_H2.mp3" class="clip" id="X"></audio>
+            </button>
+            <button class="col-sm drum-pad btn btn-block btn-redorange" id="drum-8" onClick="play('C')">
+                C
+                <audio src="./clip/Dsc_Oh.mp3" class="clip" id="C"></audio>
+            </button>
+        </div>
+    </div>
+  </body>
+  <!-- freeCodeCamp testing
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   -->
+</html>
